@@ -7,210 +7,219 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #e5e5e5;
         }
-        .hero-bg {
-            background-image: url('https://placehold.co/1920x1080/0a0a0a/1f2937?text=AI+Generated+Banner');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        .glass-effect {
-            background: rgba(17, 24, 39, 0.6);
+        .glassmorphism {
+            background: rgba(10, 10, 10, 0.25);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .btn-primary {
-            @apply bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105;
-        }
-        .section-title {
-            @apply text-4xl font-bold text-center mb-12 text-white;
-        }
-        .section-subtitle {
-            @apply text-center text-lg text-gray-400 -mt-8 mb-12;
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
     </style>
 </head>
-<body>
+<body class="bg-[#0a0a0a] text-gray-300">
 
-    <!-- Header -->
-    <header class="glass-effect sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white">Cyber Bidhi Sangam '25</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
-                <a href="#speakers" class="text-gray-300 hover:text-white transition">Speakers</a>
-                <a href="#schedule" class="text-gray-300 hover:text-white transition">Schedule</a>
-                <a href="#dates" class="text-gray-300 hover:text-white transition">Dates</a>
-                <a href="#register" class="btn-primary -my-2">Register</a>
+    <header class="sticky top-0 z-50 glassmorphism">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">Cyber Bidhi Sangam 2025</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="hover:text-blue-500">About</a>
+                <a href="#speakers" class="hover:text-blue-500">Speakers</a>
+                <a href="#schedule" class="hover:text-blue-500">Schedule</a>
+                <a href="#dates" class="hover:text-blue-500">Dates</a>
+                <a href="#register" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Register</a>
             </div>
             <div class="md:hidden">
-                <!-- Mobile menu button can be added here if needed -->
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
         </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
+            <a href="#speakers" class="block py-2 px-4 text-sm hover:bg-gray-700">Speakers</a>
+            <a href="#schedule" class="block py-2 px-4 text-sm hover:bg-gray-700">Schedule</a>
+            <a href="#dates" class="block py-2 px-4 text-sm hover:bg-gray-700">Dates</a>
+            <a href="#register" class="block py-2 px-4 text-sm bg-blue-600 text-white text-center">Register</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center justify-center">
-        <div class="text-center text-white p-8">
-            <div class="glass-effect rounded-2xl p-8 md:p-16">
-                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">Cyber Bidhi Sangam 2025</h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-300">An Initiative by NLSIU PGD Students in Cyber Law & Cyber Forensics Alumni</p>
-                <a href="#register" class="btn-primary text-lg">Register Now</a>
+    <main>
+        <section id="hero" class="h-screen bg-cover bg-center bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            <div class="h-full flex items-center justify-center bg-black bg-opacity-50">
+                <div class="text-center glassmorphism p-12 rounded-xl">
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">Cyber Bidhi Sangam <span class="text-blue-500">2025</span></h1>
+                    <p class="text-xl md:text-2xl mt-4 font-light text-gray-200">An Initiative by NLSIU PGD Students in Cyber Law & Cyber Forensics Alumni</p>
+                    <a href="#register" class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">Register Now</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <main class="container mx-auto px-6 py-20">
-
-        <!-- About Section -->
         <section id="about" class="py-20">
-            <h2 class="section-title">About The Conference</h2>
-            <p class="section-subtitle">Exploring the Frontiers of Cyber Law and Digital Forensics</p>
-            <!-- EDIT HERE: Update the conference description -->
-            <div class="max-w-4xl mx-auto text-center text-gray-300 text-lg leading-relaxed">
-                <p>Cyber Bidhi Sangam 2025 is a premier gathering of legal professionals, cybersecurity experts, law enforcement officials, and academics. Our mission is to foster a dialogue on the evolving landscape of cyber law, addressing critical issues like data privacy, digital evidence, AI regulation, and the challenges posed by emerging technologies. This conference serves as a confluence of ideas, aiming to shape the future of digital jurisprudence and forensic practices in India and beyond.</p>
-            </div>
-        </section>
-
-        <!-- Important Dates -->
-        <section id="dates" class="py-20 bg-gray-900/50 rounded-2xl">
-            <h2 class="section-title">Important Dates</h2>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <!-- EDIT HERE: Update the dates -->
-                <div class="glass-effect p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-blue-400 mb-2">Call for Papers Opens</h3>
-                    <p class="text-2xl font-semibold text-white">August 1, 2024</p>
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">About The Conference</h2>
+                    <p class="text-lg text-blue-400">Exploring the Frontiers of Cyber Law and Digital Forensics</p>
                 </div>
-                <div class="glass-effect p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-blue-400 mb-2">Registration Deadline</h3>
-                    <p class="text-2xl font-semibold text-white">January 15, 2025</p>
-                </div>
-                <div class="glass-effect p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-blue-400 mb-2">Conference Dates</h3>
-                    <p class="text-2xl font-semibold text-white">March 10-11, 2025</p>
+                <div class="max-w-4xl mx-auto glassmorphism p-8 rounded-lg">
+                    <p class="text-center text-lg">
+                        Cyber Bidhi Sangam 2025 is a premier gathering of legal professionals, cybersecurity experts, and students dedicated to advancing the discourse on cyber law and digital forensics. This conference aims to foster a collaborative environment for sharing knowledge, discussing challenges, and shaping the future of our digital legal framework.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Speakers Section -->
+        <section id="dates" class="py-20 bg-black bg-opacity-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">Important Dates</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="glassmorphism p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-blue-400">August 1, 2024</h3>
+                        <p class="mt-2 text-lg">Call for Papers Opens</p>
+                    </div>
+                    <div class="glassmorphism p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-blue-400">January 15, 2025</h3>
+                        <p class="mt-2 text-lg">Registration Deadline</p>
+                    </div>
+                    <div class="glassmorphism p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-blue-400">March 10-11, 2025</h3>
+                        <p class="mt-2 text-lg">Conference Dates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="speakers" class="py-20">
-            <h2 class="section-title">Featured Speakers</h2>
-            <p class="section-subtitle">Insights from Industry and Academic Leaders</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- EDIT SPEAKER 1 DETAILS BELOW -->
-                <div class="text-center">
-                    <img src="https://placehold.co/300x300/1f2937/e5e5e5?text=Speaker+1" alt="Speaker 1" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover">
-                    <h3 class="text-2xl font-bold text-white">Dr. Anya Sharma</h3>
-                    <p class="text-blue-400 mb-2">Cyber Law Advocate, Supreme Court</p>
-                    <p class="text-gray-400">Expert in IT Act, 2000, focusing on Section 66 and data protection frameworks.</p>
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">Featured Speakers</h2>
                 </div>
-                <!-- EDIT SPEAKER 2 DETAILS BELOW -->
-                <div class="text-center">
-                    <img src="https://placehold.co/300x300/1f2937/e5e5e5?text=Speaker+2" alt="Speaker 2" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover">
-                    <h3 class="text-2xl font-bold text-white">Rohan Verma</h3>
-                    <p class="text-blue-400 mb-2">Head of Forensics, CyberPeace Foundation</p>
-                    <p class="text-gray-400">Specializes in mobile forensics and investigating complex digital crimes.</p>
-                </div>
-                <!-- EDIT SPEAKER 3 DETAILS BELOW -->
-                <div class="text-center">
-                    <img src="https://placehold.co/300x300/1f2937/e5e5e5?text=Speaker+3" alt="Speaker 3" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover">
-                    <h3 class="text-2xl font-bold text-white">Prof. Meera Desai</h3>
-                    <p class="text-blue-400 mb-2">Professor of Law, NLSIU Bangalore</p>
-                    <p class="text-gray-400">Leading academic voice on the legal and ethical implications of Artificial Intelligence.</p>
-                </div>
-                <!-- Add more speakers by copying the structure above -->
-            </div>
-        </section>
-
-        <!-- Schedule Section -->
-        <section id="schedule" class="py-20">
-            <h2 class="section-title">Conference Schedule</h2>
-            <div class="max-w-5xl mx-auto">
-                <!-- EDIT DAY 1 SCHEDULE -->
-                <div class="mb-12">
-                    <h3 class="text-3xl font-bold text-center mb-6 text-blue-400">Day 1: March 10, 2025</h3>
-                    <div class="space-y-6">
-                        <div class="glass-effect p-6 rounded-lg flex items-center space-x-6">
-                            <time class="text-lg font-semibold text-gray-300 w-32">09:00 - 10:00</time>
-                            <div class="border-l-2 border-blue-500 pl-6">
-                                <h4 class="font-bold text-xl text-white">Inauguration & Keynote Address</h4>
-                                <p class="text-gray-400">By Dr. Anya Sharma</p>
-                            </div>
-                        </div>
-                        <div class="glass-effect p-6 rounded-lg flex items-center space-x-6">
-                            <time class="text-lg font-semibold text-gray-300 w-32">10:30 - 12:00</time>
-                            <div class="border-l-2 border-blue-500 pl-6">
-                                <h4 class="font-bold text-xl text-white">Panel: The Future of Digital Evidence</h4>
-                                <p class="text-gray-400">Moderated by Prof. Meera Desai</p>
-                            </div>
-                        </div>
-                        <!-- Add more sessions -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Speaker 1 -->
+                    <div class="glassmorphism p-6 rounded-lg text-center">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="Speaker 1" class="w-32 h-32 rounded-full mx-auto border-4 border-blue-500">
+                        <h3 class="text-2xl font-bold mt-4">Dr. Anya Sharma</h3>
+                        <p class="text-blue-400">Cyber Law Advocate, Supreme Court</p>
+                        <p class="mt-2 text-sm">Dr. Sharma is a leading voice in cyber jurisprudence, with over 20 years of experience in high-profile cybercrime cases.</p>
                     </div>
-                </div>
-                <!-- EDIT DAY 2 SCHEDULE -->
-                <div>
-                    <h3 class="text-3xl font-bold text-center mb-6 text-blue-400">Day 2: March 11, 2025</h3>
-                    <div class="space-y-6">
-                        <div class="glass-effect p-6 rounded-lg flex items-center space-x-6">
-                            <time class="text-lg font-semibold text-gray-300 w-32">09:30 - 11:00</time>
-                            <div class="border-l-2 border-blue-500 pl-6">
-                                <h4 class="font-bold text-xl text-white">Workshop: AI in Legal Practice</h4>
-                                <p class="text-gray-400">Led by Rohan Verma</p>
-                            </div>
-                        </div>
-                        <!-- Add more sessions -->
+                    <!-- Speaker 2 -->
+                    <div class="glassmorphism p-6 rounded-lg text-center">
+                        <img src="https://i.pravatar.cc/150?img=2" alt="Speaker 2" class="w-32 h-32 rounded-full mx-auto border-4 border-blue-500">
+                        <h3 class="text-2xl font-bold mt-4">Rohan Verma</h3>
+                        <p class="text-blue-400">Chief Technology Officer, SecureNet</p>
+                        <p class="mt-2 text-sm">Rohan is a cybersecurity expert who has developed several patented security protocols for financial institutions.</p>
+                    </div>
+                    <!-- Speaker 3 -->
+                    <div class="glassmorphism p-6 rounded-lg text-center">
+                        <img src="https://i.pravatar.cc/150?img=3" alt="Speaker 3" class="w-32 h-32 rounded-full mx-auto border-4 border-blue-500">
+                        <h3 class="text-2xl font-bold mt-4">Prof. Meera Desai</h3>
+                        <p class="text-blue-400">Head of Digital Forensics, NLSIU</p>
+                        <p class="mt-2 text-sm">Professor Desai's research focuses on the intersection of AI and evidence collection in criminal investigations.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Key People Section -->
-        <section id="people" class="py-20">
-            <h2 class="section-title">Organizing Committee</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <!-- EDIT KEY PERSON 1 -->
-                <div class="glass-effect p-6 rounded-lg">
-                    <img src="https://placehold.co/200x200/1f2937/e5e5e5?text=Person+1" alt="Key Person 1" class="w-32 h-32 mx-auto rounded-full mb-4 border-2 border-gray-600 object-cover">
-                    <h3 class="text-xl font-bold text-white">Alok Kumar</h3>
-                    <p class="text-blue-400">Convenor</p>
+        <section id="schedule" class="py-20 bg-black bg-opacity-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">Conference Schedule</h2>
                 </div>
-                <!-- EDIT KEY PERSON 2 -->
-                <div class="glass-effect p-6 rounded-lg">
-                    <img src="https://placehold.co/200x200/1f2937/e5e5e5?text=Person+2" alt="Key Person 2" class="w-32 h-32 mx-auto rounded-full mb-4 border-2 border-gray-600 object-cover">
-                    <h3 class="text-xl font-bold text-white">Sunita Reddy</h3>
-                    <p class="text-blue-400">Co-Convenor</p>
+                <div class="flex flex-col md:flex-row justify-center gap-12">
+                    <!-- Day 1 -->
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-3xl font-bold text-center text-blue-400 mb-8">Day 1: March 10, 2025</h3>
+                        <div class="relative border-l-4 border-blue-500 pl-8 space-y-8">
+                            <div class="glassmorphism p-6 rounded-lg">
+                                <p class="font-bold">09:00 AM - 10:00 AM</p>
+                                <h4 class="text-xl font-semibold">Keynote: The Future of Digital Evidence</h4>
+                                <p class="text-sm text-gray-400">Speaker: Dr. Anya Sharma</p>
+                            </div>
+                            <div class="glassmorphism p-6 rounded-lg">
+                                <p class="font-bold">11:00 AM - 12:30 PM</p>
+                                <h4 class="text-xl font-semibold">Panel: AI in Legal Tech</h4>
+                                <p class="text-sm text-gray-400">Moderator: Prof. Meera Desai</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Day 2 -->
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-3xl font-bold text-center text-blue-400 mb-8">Day 2: March 11, 2025</h3>
+                        <div class="relative border-l-4 border-blue-500 pl-8 space-y-8">
+                            <div class="glassmorphism p-6 rounded-lg">
+                                <p class="font-bold">10:00 AM - 11:30 AM</p>
+                                <h4 class="text-xl font-semibold">Workshop: Blockchain & Smart Contracts</h4>
+                                <p class="text-sm text-gray-400">Led by: Rohan Verma</p>
+                            </div>
+                            <div class="glassmorphism p-6 rounded-lg">
+                                <p class="font-bold">01:30 PM - 03:00 PM</p>
+                                <h4 class="text-xl font-semibold">Closing Remarks & Networking</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Add more people -->
             </div>
         </section>
 
-        <!-- Registration Section -->
-        <section id="register" class="py-20 text-center">
-            <div class="glass-effect max-w-4xl mx-auto p-12 rounded-2xl">
-                <h2 class="text-4xl font-bold text-white mb-4">Join the Conversation</h2>
-                <p class="text-gray-300 text-lg mb-8">Register now to secure your spot at Cyber Bidhi Sangam 2025. Limited seats available.</p>
-                <!-- EDIT HERE: Change the link to your registration page (e.g., Google Form, Townscript, etc.) -->
-                <a href="#" class="btn-primary text-xl">Proceed to Registration</a>
+        <section id="committee" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">Organizing Committee</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="glassmorphism p-4 rounded-lg text-center">
+                        <img src="https://i.pravatar.cc/150?img=4" alt="Committee Member" class="w-24 h-24 rounded-full mx-auto border-4 border-gray-500">
+                        <h3 class="text-xl font-bold mt-3">Alok Kumar</h3>
+                        <p class="text-blue-400">Convenor</p>
+                    </div>
+                    <div class="glassmorphism p-4 rounded-lg text-center">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="Committee Member" class="w-24 h-24 rounded-full mx-auto border-4 border-gray-500">
+                        <h3 class="text-xl font-bold mt-3">Priya Singh</h3>
+                        <p class="text-blue-400">Co-Convenor</p>
+                    </div>
+                    <div class="glassmorphism p-4 rounded-lg text-center">
+                        <img src="https://i.pravatar.cc/150?img=6" alt="Committee Member" class="w-24 h-24 rounded-full mx-auto border-4 border-gray-500">
+                        <h3 class="text-xl font-bold mt-3">Sameer Patel</h3>
+                        <p class="text-blue-400">Treasurer</p>
+                    </div>
+                    <div class="glassmorphism p-4 rounded-lg text-center">
+                        <img src="https://i.pravatar.cc/150?img=7" alt="Committee Member" class="w-24 h-24 rounded-full mx-auto border-4 border-gray-500">
+                        <h3 class="text-xl font-bold mt-3">Neha Reddy</h3>
+                        <p class="text-blue-400">Secretary</p>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <section id="register" class="py-20 bg-black bg-opacity-20">
+            <div class="container mx-auto px-6">
+                <div class="glassmorphism p-12 rounded-lg text-center max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold text-white">Join the Conversation</h2>
+                    <p class="mt-4 text-lg">
+                        Be part of an essential dialogue shaping the future of cyber law. Register now to secure your spot at Cyber Bidhi Sangam 2025.
+                    </p>
+                    <a href="#" class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">Proceed to Registration</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900/50 border-t border-gray-800">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            <p>&copy; 2025 Cyber Bidhi Sangam. All Rights Reserved.</p>
-            <p class="text-sm">An initiative from the NLSIU PGD Cyber Law & Cyber Forensics Alumni Network.</p>
-            <!-- Add social media links if needed -->
+    <footer class="border-t border-gray-800">
+        <div class="container mx-auto px-6 py-4 text-center text-sm text-gray-500">
+            <p>&copy; 2025 Cyber Bidhi Sangam. All rights reserved.</p>
+            <p>An Initiative by the NLSIU PGD in Cyber Law & Cyber Forensics Alumni Network.</p>
         </div>
     </footer>
 
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
