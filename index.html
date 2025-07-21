@@ -25,7 +25,8 @@
             font-family: 'Playfair Display', serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 1)), url('images/banner.png');
+            /* EDIT HERE: Replace with your AI generated banner image */
+            background-image: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 1)), url('/images/banner.png');
             background-size: cover;
             background-position: center;
         }
@@ -68,7 +69,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header class="glass-nav sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="font-serif text-2xl font-bold text-white">CVS '25</a>
@@ -89,7 +89,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero-bg min-h-screen flex items-center">
         <div class="container mx-auto px-6 text-center text-white">
             <h1 class="font-serif text-5xl md:text-7xl font-extrabold mb-4 leading-tight">Cyber Vidhi Sangam</h1>
@@ -101,7 +100,6 @@
 
     <main class="container mx-auto px-6 py-20">
 
-        <!-- Event Details Section -->
         <section id="details" class="py-20">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="reveal">
@@ -128,21 +126,27 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-20 reveal">
             <h2 class="section-title">About The Conference</h2>
-            <p class="section-subtitle">A Confluence of Cyber Law and Digital Forensics</p>
-            <div class="max-w-4xl mx-auto text-center text-gray-300 text-lg leading-relaxed">
-                <p>Cyber Vidhi Sangam 2025 is a premier one-day gathering of legal professionals, cybersecurity experts, law enforcement, and academics. Our mission is to foster a critical dialogue on the evolving landscape of cyber law, addressing issues like data privacy, digital evidence, and AI regulation. This conference serves as a confluence of ideas, aiming to shape the future of digital jurisprudence in India and beyond.</p>
+            <p class="section-subtitle">A Confluence of Minds, A Vision for the Future</p>
+            <div class="max-w-4xl mx-auto text-left text-gray-300 text-lg leading-relaxed space-y-8">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-yellow-400 mb-3">A Historic Reunion: The Inaugural Alumni Meet</h3>
+                    <p><strong>Cyber Vidhi Sangam</strong> marks the inaugural alumni meet for the esteemed <strong>Post Graduate Diploma in Cyber Law & Cyber Forensics (PGDCLCF)</strong> from NLSIU, PACE. Spearheaded by the batch of 2025, this event is more than just a conference; it's a homecoming. It's a unique opportunity for us, the alumni, to reconnect, share our journeys, and strengthen the bonds forged during our time at India's premier law school.</p>
+                    <p class="mt-4">The core of the day is dedicated to <strong>connection and gratitude</strong>. We will host a special felicitation ceremony to honor the professors whose guidance has been instrumental in our careers. Following this, a dedicated meet-and-greet session will provide the perfect platform to build a robust professional network among peers who are now leading experts in the techno-legal domain across various industries.</p>
+                </div>
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-yellow-400 mb-3">Our Vision for the Future</h3>
+                    <p>While this meet celebrates our shared past, its gaze is fixed firmly on the future. <strong>Cyber Vidhi Sangam</strong> is the cornerstone of a much larger ambition. In a nation rapidly digitizing, the need for a unified, authoritative techno-legal voice has never been more critical.</p>
+                    <p class="mt-4">This event is the first step in transforming our powerful alumni network into a formidable <strong>national techno-legal forum</strong>. Our vision is to create a permanent platform for policy advocacy, industry collaboration, and continuous learning that can guide India through the complex challenges at the intersection of technology and law.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Speakers Section -->
         <section id="speakers" class="py-20">
             <h2 class="section-title reveal">Esteemed Speakers</h2>
             <p class="section-subtitle reveal">Insights from the Forefront of Law and Technology</p>
             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-                <!-- EDIT SPEAKER 1 DETAILS BELOW -->
                 <div class="text-center reveal">
                     <div class="relative inline-block">
                         <img src="https://placehold.co/300x300/1b263b/e0e1dd?text=Dr.+N" alt="Dr. Nagarathna" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover">
@@ -151,7 +155,6 @@
                     <h3 class="text-2xl font-bold text-white">Dr. Nagarathna</h3>
                     <p class="text-yellow-400 mb-2">HOD, PACE, NLSIU</p>
                 </div>
-                <!-- EDIT SPEAKER 2 DETAILS BELOW -->
                 <div class="text-center reveal" style="transition-delay: 200ms;">
                     <div class="relative inline-block">
                         <img src="https://placehold.co/300x300/1b263b/e0e1dd?text=XXX+YYY" alt="XXX YYY" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover">
@@ -160,7 +163,6 @@
                     <h3 class="text-2xl font-bold text-white">XXX YYY</h3>
                     <p class="text-yellow-400 mb-2">Advocate, Supreme Court</p>
                 </div>
-                <!-- EDIT SPEAKER 3 DETAILS BELOW -->
                 <div class="text-center reveal" style="transition-delay: 400ms;">
                     <div class="relative inline-block">
                         <img src="https://placehold.co/300x300/1b263b/e0e1dd?text=PPP+QQQ" alt="PPP QQQ" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover">
@@ -172,12 +174,10 @@
             </div>
         </section>
 
-        <!-- Schedule Section -->
         <section id="schedule" class="py-20">
             <h2 class="section-title reveal">Day's Agenda</h2>
             <div class="max-w-3xl mx-auto relative">
                 <div class="border-l-2 border-dashed border-gray-600 absolute h-full top-0 left-4 md:left-1/2"></div>
-                <!-- EDIT SCHEDULE ITEMS -->
                 <div class="mb-8 flex justify-between items-center w-full right-timeline reveal">
                     <div class="order-1 md:w-5/12"></div>
                     <div class="z-20 flex items-center order-1 bg-yellow-500 shadow-xl w-8 h-8 rounded-full"></div>
@@ -215,12 +215,10 @@
             </div>
         </section>
 
-        <!-- Organizers Section -->
         <section id="organizers" class="py-20">
             <h2 class="section-title reveal">Organizing Committee</h2>
             <p class="section-subtitle reveal">The Alumni Team Behind This Initiative</p>
             <div class="max-w-5xl mx-auto glass-card rounded-lg p-8 md:p-12 reveal">
-                <!-- EDIT ORGANIZER NAMES AND AFFILIATIONS -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 text-lg">
                     <div><span class="font-semibold text-white">Organizer Name 1,</span> <span class="text-gray-400">Affiliation</span></div>
                     <div><span class="font-semibold text-white">Organizer Name 2,</span> <span class="text-gray-400">Affiliation</span></div>
@@ -241,19 +239,16 @@
             </div>
         </section>
 
-        <!-- Registration Section -->
         <section id="register" class="py-20 text-center reveal">
             <div class="max-w-4xl mx-auto p-12 rounded-2xl" style="background: var(--bg-mid);">
                 <h2 class="font-serif text-4xl font-bold text-white mb-4">Secure Your Place</h2>
                 <p class="text-gray-300 text-lg mb-8">Registration is now open. Join us for a day of insightful discussions and networking. Limited seats available.</p>
-                <!-- EDIT HERE: Change the link to your registration page (e.g., Google Form, Townscript, etc.) -->
                 <a href="#" class="btn-primary text-xl">Register Now</a>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="border-t border-gray-800">
         <div class="container mx-auto px-6 py-8 text-center text-gray-400">
             <p>&copy; 2025 Cyber Vidhi Sangam. All Rights Reserved.</p>
