@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The inaugural alumni meet for the NLSIU PGD in Cyber Law & Forensics. Join us on 27th September in Bangalore for a confluence of minds and a vision for the future of techno-legal discourse in India.">
     <title>Cyber Vidhi Sangam 2025</title>
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
     <link rel="alternate icon" href="/images/favicon.ico" type="image/x-icon">
@@ -93,37 +94,42 @@
             }
         }
         /* Animation for scroll reveal */
-        .reveal {
+        .js .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.6s ease-out;
         }
-        .reveal.visible {
+        .js .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
     </style>
+    <script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
     <header class="nav-bar sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
             <a href="#" class="font-serif text-2xl font-bold text-gray-900">CVS '25</a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-blue-700 transition">About</a>
-                <a href="#speakers" class="text-gray-600 hover:text-blue-700 transition">Speakers</a>
-                <a href="#schedule" class="text-gray-600 hover:text-blue-700 transition">Schedule</a>
-                <a href="#organizers" class="text-gray-600 hover:text-blue-700 transition">Organizers</a>
-                <a href="#register" class="btn-primary -my-2">Register</a>
-            </div>
-            <div class="md:hidden">
-                <button class="text-gray-800">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-700 focus:outline-none focus:text-blue-700" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+
                     </svg>
                 </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden w-full md:flex md:items-center md:w-auto">
+                <div class="w-full md:flex md:items-center md:space-x-8 pt-4 md:pt-0">
+                    <a href="#about" class="block py-2 text-gray-600 hover:text-blue-700">About</a>
+                    <a href="#speakers" class="block py-2 text-gray-600 hover:text-blue-700">Speakers</a>
+                    <a href="#schedule" class="block py-2 text-gray-600 hover:text-blue-700">Schedule</a>
+                    <a href="#organizers" class="block py-2 text-gray-600 hover:text-blue-700">Organizers</a>
+                    <a href="#register" class="btn-primary mt-4 md:mt-0 md:-my-2">Register</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -131,7 +137,6 @@
     <section id="home" class="hero-bg min-h-screen flex items-center">
         <div class="container mx-auto px-6 text-center text-gray-900">
             <h1 class="font-serif text-5xl md:text-7xl font-extrabold mb-4 leading-tight">Cyber Vidhi Sangam</h1>
-
             <p class="text-xl md:text-2xl mb-2 text-gray-700">An Initiative by NLSIU PGD Cyber Law & Forensics Alumni</p>
             <p class="text-2xl md:text-3xl font-bold text-blue-700 mb-8">27th September</p>
             <h2 class="text-gray-800">A Confluence of Minds, A Vision for the Future</h2>
@@ -190,38 +195,32 @@
             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="text-center reveal">
                     <div class="relative inline-block">
-
                         <img src="https://placehold.co/300x300/ffffff/212529?text=Dr.+N" alt="Dr. Nagarathna" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
                         <span class="absolute bottom-4 right-4 bg-blue-700 w-8 h-8 rounded-full"></span>
                     </div>
                     <div class="mt-4">
                         <h3 class="text-2xl font-bold text-gray-900">Dr. John Doe</h3>
                         <p class="text-blue-700 mb-2">Professor, Law School</p>
-
                     </div>
                 </div>
                 <div class="text-center reveal" style="transition-delay: 200ms;">
                     <div class="relative inline-block">
-
                         <img src="https://placehold.co/300x300/ffffff/212529?text=XXX+YYY" alt="XXX YYY" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
                          <span class="absolute bottom-4 right-4 bg-blue-700 w-8 h-8 rounded-full"></span>
                     </div>
                     <div class="mt-4">
                         <h3 class="text-2xl font-bold text-gray-900">XXX YYY</h3>
                         <p class="text-blue-700 mb-2">Advocate, Supreme Court</p>
-
                     </div>
                 </div>
                 <div class="text-center reveal" style="transition-delay: 400ms;">
                     <div class="relative inline-block">
-
-                        <img src="https://placehold.co/300x300/ffffff/212529?text=PPP+QQQ" alt="PPP QQQ" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
+                         <img src="https://placehold.co/300x300/ffffff/212529?text=PPP+QQQ" alt="PPP QQQ" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
                          <span class="absolute bottom-4 right-4 bg-blue-700 w-8 h-8 rounded-full"></span>
                     </div>
                     <div class="mt-4">
                         <h3 class="text-2xl font-bold text-gray-900">PPP QQQ</h3>
                         <p class="text-blue-700 mb-2">CTO, XYZ Corporation</p>
-
                     </div>
                 </div>
             </div>
@@ -310,6 +309,16 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
         // Simple scroll reveal animation
         const revealElements = document.querySelectorAll('.reveal');
 
