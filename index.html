@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The inaugural alumni meet for the NLSIU PGD in Cyber Law & Forensics. Join us on 27th September in Bangalore for a confluence of minds and a vision for the future of techno-legal discourse in India.">
     <title>Cyber Vidhi Sangam 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,91 +11,132 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0d1b2a;
-            --bg-mid: #1b263b;
-            --text-light: #e0e1dd;
-            --text-gold: #d4af37;
-            --border-light: rgba(224, 225, 221, 0.2);
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --primary: #0056b3;
+            --border-color: #dee2e6;
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
         }
         .font-serif {
             font-family: 'Playfair Display', serif;
         }
         .hero-bg {
             /* EDIT HERE: Replace with your AI generated banner image */
-            background-image: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 1)), url('/images/banner.png');
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url('/images/banner.png');
             background-size: cover;
             background-position: center;
         }
-        .glass-nav {
-            background: rgba(13, 27, 42, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-light);
+        .nav-bar {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        .glass-card {
-            background: rgba(27, 38, 59, 0.5);
-            border: 1px solid var(--border-light);
+        .card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .glass-card:hover {
-            background: rgba(27, 38, 59, 0.8);
-            border-color: var(--text-gold);
+        .card:hover {
+            border-color: var(--primary);
             transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.1);
         }
         .btn-primary {
-            @apply bg-transparent text-lg font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white hover:scale-105;
+            @apply bg-blue-700 text-lg font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform text-white hover:bg-blue-800 hover:scale-105;
         }
         .section-title {
-            @apply font-serif text-4xl md:text-5xl font-bold text-center mb-4 text-white;
+            @apply font-serif text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800;
         }
         .section-subtitle {
-            @apply text-center text-lg text-gray-400 mb-16;
+            @apply text-center text-lg text-gray-600 mb-16;
+        }
+        .timeline .timeline-item {
+            position: relative;
+        }
+        .timeline .timeline-item .card {
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            .timeline .timeline-item:nth-child(odd) {
+                padding-right: calc(50% + 2rem);
+                text-align: right;
+            }
+            .timeline .timeline-item:nth-child(even) {
+                padding-left: calc(50% + 2rem);
+            }
+            .timeline .timeline-item:nth-child(odd) .card::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: 100%;
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent transparent transparent var(--border-color);
+            }
+            .timeline .timeline-item:nth-child(even) .card::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                right: 100%;
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent var(--border-color) transparent transparent;
+            }
         }
         /* Animation for scroll reveal */
-        .reveal {
+        .js .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.6s ease-out;
         }
-        .reveal.visible {
+        .js .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
     </style>
+    <script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-    <header class="glass-nav sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="font-serif text-2xl font-bold text-white">CVS '25</a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
-                <a href="#speakers" class="text-gray-300 hover:text-white transition">Speakers</a>
-                <a href="#schedule" class="text-gray-300 hover:text-white transition">Schedule</a>
-                <a href="#organizers" class="text-gray-300 hover:text-white transition">Organizers</a>
-                <a href="#register" class="btn-primary -my-2">Register</a>
-            </div>
+    <header class="nav-bar sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
+            <a href="#" class="font-serif text-2xl font-bold text-gray-900">CVS '25</a>
+
             <div class="md:hidden">
-                <button class="text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-700 focus:outline-none focus:text-blue-700" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden w-full md:flex md:items-center md:w-auto">
+                <div class="w-full md:flex md:items-center md:space-x-8 pt-4 md:pt-0">
+                    <a href="#about" class="block py-2 text-gray-600 hover:text-blue-700">About</a>
+                    <a href="#speakers" class="block py-2 text-gray-600 hover:text-blue-700">Speakers</a>
+                    <a href="#schedule" class="block py-2 text-gray-600 hover:text-blue-700">Schedule</a>
+                    <a href="#organizers" class="block py-2 text-gray-600 hover:text-blue-700">Organizers</a>
+                    <a href="#register" class="btn-primary mt-4 md:mt-0 md:-my-2">Register</a>
+                </div>
             </div>
         </nav>
     </header>
 
     <section id="home" class="hero-bg min-h-screen flex items-center">
-        <div class="container mx-auto px-6 text-center text-white">
+        <div class="container mx-auto px-6 text-center text-gray-900">
             <h1 class="font-serif text-5xl md:text-7xl font-extrabold mb-4 leading-tight">Cyber Vidhi Sangam</h1>
-            <p class="text-xl md:text-2xl mb-2 text-gray-300">An Initiative by NLSIU PGD Cyber Law & Forensics Alumni</p>
-            <p class="text-2xl md:text-3xl font-bold text-yellow-400 mb-8">27th September</p>
-            <h2>A Confluence of Minds, A Vision for the Future</h2>
+            <p class="text-xl md:text-2xl mb-2 text-gray-700">An Initiative by NLSIU PGD Cyber Law & Forensics Alumni</p>
+            <p class="text-2xl md:text-3xl font-bold text-blue-700 mb-8">27th September</p>
+            <h2 class="text-gray-800">A Confluence of Minds, A Vision for the Future</h2>
              <a href="#register" class="btn-primary"><u>Reserve Your Seat</u></a>
         </div>
     </section>
@@ -104,39 +146,39 @@
         <section id="details" class="py-20">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="reveal">
-                    <div class="text-5xl text-yellow-400 mb-4 mx-auto w-20 h-20 flex items-center justify-center bg-gray-800 rounded-full">
+                    <div class="text-5xl text-blue-700 mb-4 mx-auto w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">Date</h3>
-                    <p class="text-lg text-gray-300">27th September</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Date</h3>
+                    <p class="text-lg text-gray-700">27th September</p>
                 </div>
                 <div class="reveal" style="transition-delay: 200ms;">
-                    <div class="text-5xl text-yellow-400 mb-4 mx-auto w-20 h-20 flex items-center justify-center bg-gray-800 rounded-full">
+                    <div class="text-5xl text-blue-700 mb-4 mx-auto w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">Venue</h3>
-                    <p class="text-lg text-gray-300">Bangalore, India <br/><span class="text-sm text-gray-500">(Venue to be announced)</span></p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Venue</h3>
+                    <p class="text-lg text-gray-700">Bangalore, India <br/><span class="text-sm text-gray-500">(Venue to be announced)</span></p>
                 </div>
                 <div class="reveal" style="transition-delay: 400ms;">
-                    <div class="text-5xl text-yellow-400 mb-4 mx-auto w-20 h-20 flex items-center justify-center bg-gray-800 rounded-full">
+                    <div class="text-5xl text-blue-700 mb-4 mx-auto w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">Time</h3>
-                    <p class="text-lg text-gray-300">09:00 AM - 05:00 PM</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Time</h3>
+                    <p class="text-lg text-gray-700">09:00 AM - 05:00 PM</p>
                 </div>
             </div>
         </section>
 
         <section id="about" class="py-20 reveal">
             
-            <div class="max-w-4xl mx-auto text-left text-gray-300 text-lg leading-relaxed space-y-8">
+            <div class="max-w-4xl mx-auto text-left text-gray-700 text-lg leading-relaxed space-y-8">
                 <div>
-                    <h3 class="font-serif text-2xl font-bold text-yellow-400 mb-3">A Historic Reunion: The Inaugural Alumni Meet</h3>
+                    <h3 class="font-serif text-2xl font-bold text-blue-700 mb-3">A Historic Reunion: The Inaugural Alumni Meet</h3>
                     <p><strong>Cyber Vidhi Sangam</strong> marks the inaugural alumni meet for the esteemed <strong>Post Graduate Diploma in Cyber Law & Cyber Forensics (PGDCLCF)</strong> from NLSIU, PACE. Spearheaded by the batch of 2025, this event is more than just a conference; it's a homecoming. It's a unique opportunity for us, the alumni, to reconnect, share our journeys, and strengthen the bonds forged during our time at India's premier law school.</p>
                     <p class="mt-4">The core of the day is dedicated to <strong>connection and gratitude</strong>. We will host a special felicitation ceremony to honor the professors whose guidance has been instrumental in our careers. Following this, a dedicated meet-and-greet session will provide the perfect platform to build a robust professional network among peers who are now leading experts in the techno-legal domain across various industries.</p>
                 </div>
                 <div>
-                    <h3 class="font-serif text-2xl font-bold text-yellow-400 mb-3">Our Vision for the Future</h3>
+                    <h3 class="font-serif text-2xl font-bold text-blue-700 mb-3">Our Vision for the Future</h3>
                     <p>While this meet celebrates our shared past, its gaze is fixed firmly on the future. <strong>Cyber Vidhi Sangam</strong> is the cornerstone of a much larger ambition. In a nation rapidly digitizing, the need for a unified, authoritative techno-legal voice has never been more critical.</p>
                     <p class="mt-4">This event is the first step in transforming our powerful alumni network into a formidable <strong>national techno-legal forum</strong>. Our vision is to create a permanent platform for policy advocacy, industry collaboration, and continuous learning that can guide India through the complex challenges at the intersection of technology and law.</p>
                 </div>
@@ -149,67 +191,73 @@
             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="text-center reveal">
                     <div class="relative inline-block">
-                        <img src="https://placehold.co/300x300/1b263b/e0e1dd?text=Dr.+N" alt="Dr. Nagarathna" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover">
-                        <span class="absolute bottom-4 right-4 bg-yellow-500 w-8 h-8 rounded-full"></span>
+                        <img src="https://placehold.co/300x300/ffffff/212529?text=Dr.+N" alt="Dr. Nagarathna" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
+                        <span class="absolute bottom-4 right-4 bg-blue-700 w-8 h-8 rounded-full"></span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white">Dr. John Doe</h3>
-                    <p class="text-yellow-400 mb-2">Professor, Law School</p>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-bold text-gray-900">Dr. John Doe</h3>
+                        <p class="text-blue-700 mb-2">Professor, Law School</p>
+                    </div>
                 </div>
                 <div class="text-center reveal" style="transition-delay: 200ms;">
                     <div class="relative inline-block">
-                        <img src="https://placehold.co/300x300/1b263b/e0e1dd?text=XXX+YYY" alt="XXX YYY" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover">
-                         <span class="absolute bottom-4 right-4 bg-yellow-500 w-8 h-8 rounded-full"></span>
+                        <img src="https://placehold.co/300x300/ffffff/212529?text=XXX+YYY" alt="XXX YYY" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
+                         <span class="absolute bottom-4 right-4 bg-blue-700 w-8 h-8 rounded-full"></span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white">XXX YYY</h3>
-                    <p class="text-yellow-400 mb-2">Advocate, Supreme Court</p>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-bold text-gray-900">XXX YYY</h3>
+                        <p class="text-blue-700 mb-2">Advocate, Supreme Court</p>
+                    </div>
                 </div>
                 <div class="text-center reveal" style="transition-delay: 400ms;">
                     <div class="relative inline-block">
-                        <img src="https://placehold.co/300x300/1b263b/e0e1dd?text=PPP+QQQ" alt="PPP QQQ" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover">
-                         <span class="absolute bottom-4 right-4 bg-yellow-500 w-8 h-8 rounded-full"></span>
+                        <img src="https://placehold.co/300x300/ffffff/212529?text=PPP+QQQ" alt="PPP QQQ" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
+                         <span class="absolute bottom-4 right-4 bg-blue-700 w-8 h-8 rounded-full"></span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white">PPP QQQ</h3>
-                    <p class="text-yellow-400 mb-2">CTO, XYZ Corporation</p>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-bold text-gray-900">PPP QQQ</h3>
+                        <p class="text-blue-700 mb-2">CTO, XYZ Corporation</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="schedule" class="py-20">
             <h2 class="section-title reveal">Day's Agenda</h2>
-            <div class="max-w-3xl mx-auto relative">
-                <div class="border-l-2 border-dashed border-gray-600 absolute h-full top-0 left-4 md:left-1/2"></div>
-                <div class="mb-8 flex justify-between items-center w-full right-timeline reveal">
+            <div class="max-w-3xl mx-auto relative timeline">
+                <div class="border-l-2 border-dashed border-gray-300 absolute h-full top-0 left-4 md:left-1/2 -translate-x-1/2"></div>
+                <div class="timeline-item mb-8 flex justify-between items-center w-full right-timeline reveal">
                     <div class="order-1 md:w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-yellow-500 shadow-xl w-8 h-8 rounded-full"></div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
-                        <p class="text-gray-400 text-sm">09:00 - 09:30</p>
-                        <h3 class="font-bold text-white text-lg">Registration & Welcome Coffee</h3>
+                    <div class="z-20 flex items-center order-1 bg-blue-700 shadow-xl w-8 h-8 rounded-full"></div>
+                    <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                        <p class="text-gray-600 text-sm">09:00 - 09:30</p>
+                        <h3 class="font-bold text-gray-900 text-lg">Registration & Welcome Coffee</h3>
                     </div>
                 </div>
-                <div class="mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline reveal">
+                <div class="timeline-item mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline reveal">
                     <div class="order-1 md:w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-yellow-500 shadow-xl w-8 h-8 rounded-full"></div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
-                        <p class="text-gray-400 text-sm">09:30 - 10:30</p>
-                        <h3 class="font-bold text-white text-lg">Inaugural Address & Keynote</h3>
-                        <p class="text-sm text-gray-300">by Dr. Nagarathna</p>
+                    <div class="z-20 flex items-center order-1 bg-blue-700 shadow-xl w-8 h-8 rounded-full"></div>
+                    <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                        <p class="text-gray-600 text-sm">09:30 - 10:30</p>
+                        <h3 class="font-bold text-gray-900 text-lg">Inaugural Address & Keynote</h3>
+                        <p class="text-sm text-gray-700">by Dr. Nagarathna</p>
                     </div>
                 </div>
-                 <div class="mb-8 flex justify-between items-center w-full right-timeline reveal">
+                 <div class="timeline-item mb-8 flex justify-between items-center w-full right-timeline reveal">
                     <div class="order-1 md:w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-yellow-500 shadow-xl w-8 h-8 rounded-full"></div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
-                        <p class="text-gray-400 text-sm">11:00 - 12:30</p>
-                        <h3 class="font-bold text-white text-lg">Panel: AI, Ethics, and the Law</h3>
+                    <div class="z-20 flex items-center order-1 bg-blue-700 shadow-xl w-8 h-8 rounded-full"></div>
+                    <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                        <p class="text-gray-600 text-sm">11:00 - 12:30</p>
+                        <h3 class="font-bold text-gray-900 text-lg">Panel: AI, Ethics, and the Law</h3>
                     </div>
                 </div>
-                <div class="mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline reveal">
+                <div class="timeline-item mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline reveal">
                     <div class="order-1 md:w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-yellow-500 shadow-xl w-8 h-8 rounded-full"></div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
-                        <p class="text-gray-400 text-sm">02:00 - 03:30</p>
-                        <h3 class="font-bold text-white text-lg">Fireside Chat: Corporate Cyber Governance</h3>
-                         <p class="text-sm text-gray-300">with PPP QQQ</p>
+                    <div class="z-20 flex items-center order-1 bg-blue-700 shadow-xl w-8 h-8 rounded-full"></div>
+                    <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                        <p class="text-gray-600 text-sm">02:00 - 03:30</p>
+                        <h3 class="font-bold text-gray-900 text-lg">Fireside Chat: Corporate Cyber Governance</h3>
+                         <p class="text-sm text-gray-700">with PPP QQQ</p>
                     </div>
                 </div>
             </div>
@@ -218,45 +266,55 @@
         <section id="organizers" class="py-20">
             <h2 class="section-title reveal">Organizing Committee</h2>
             <p class="section-subtitle reveal">The Alumni Team Behind This Initiative</p>
-            <div class="max-w-5xl mx-auto glass-card rounded-lg p-8 md:p-12 reveal">
+            <div class="max-w-5xl mx-auto card rounded-lg p-8 md:p-12 reveal">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 text-lg">
-                    <div><span class="font-semibold text-white">Organizer Name 1,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 2,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 3,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 4,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 5,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 6,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 7,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 8,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 9,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 10,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 11,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 12,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 13,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 14,</span> <span class="text-gray-400">Affiliation</span></div>
-                    <div><span class="font-semibold text-white">Organizer Name 15,</span> <span class="text-gray-400">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 1,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 2,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 3,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 4,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 5,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 6,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 7,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 8,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 9,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 10,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 11,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 12,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 13,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 14,</span> <span class="text-gray-600">Affiliation</span></div>
+                    <div><span class="font-semibold text-gray-900">Organizer Name 15,</span> <span class="text-gray-600">Affiliation</span></div>
                 </div>
             </div>
         </section>
 
         <section id="register" class="py-20 text-center reveal">
-            <div class="max-w-4xl mx-auto p-12 rounded-2xl" style="background: var(--bg-mid);">
-                <h2 class="font-serif text-4xl font-bold text-white mb-4">Secure Your Place</h2>
-                <p class="text-gray-300 text-lg mb-8">Registration is now open. Join us for a day of insightful discussions and networking. Limited seats available.</p>
+            <div class="max-w-4xl mx-auto p-12 rounded-2xl" style="background: var(--bg-white);">
+                <h2 class="font-serif text-4xl font-bold text-gray-900 mb-4">Secure Your Place</h2>
+                <p class="text-gray-700 text-lg mb-8">Registration is now open. Join us for a day of insightful discussions and networking. Limited seats available.</p>
                 <a href="#" class="btn-primary text-xl">Register Now</a>
             </div>
         </section>
 
     </main>
 
-    <footer class="border-t border-gray-800">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+    <footer class="border-t border-gray-200">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
             <p>&copy; 2025 Cyber Vidhi Sangam. All Rights Reserved.</p>
             <p class="text-sm">An initiative from the NLSIU PGD Cyber Law & Cyber Forensics Alumni Network.</p>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
         // Simple scroll reveal animation
         const revealElements = document.querySelectorAll('.reveal');
 
