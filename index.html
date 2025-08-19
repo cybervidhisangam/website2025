@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Vidhi Sangam 2025</title>
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/images/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,6 +108,7 @@
 
     <header class="nav-bar sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+
             <a href="#" class="font-serif text-2xl font-bold text-gray-900">CVS '25</a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#about" class="text-gray-600 hover:text-blue-700 transition">About</a>
@@ -116,6 +119,7 @@
             </div>
             <div class="md:hidden">
                 <button class="text-gray-800">
+
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
@@ -127,10 +131,12 @@
     <section id="home" class="hero-bg min-h-screen flex items-center">
         <div class="container mx-auto px-6 text-center text-gray-900">
             <h1 class="font-serif text-5xl md:text-7xl font-extrabold mb-4 leading-tight">Cyber Vidhi Sangam</h1>
+
             <p class="text-xl md:text-2xl mb-2 text-gray-700">An Initiative by NLSIU PGD Cyber Law & Forensics Alumni</p>
             <p class="text-2xl md:text-3xl font-bold text-blue-700 mb-8">27th September</p>
             <h2 class="text-gray-800">A Confluence of Minds, A Vision for the Future</h2>
              <a href="#register" class="btn-primary"><u>Reserve Your Seat</u></a>
+
         </div>
     </section>
 
@@ -184,32 +190,38 @@
             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="text-center reveal">
                     <div class="relative inline-block">
+
                         <img src="https://placehold.co/300x300/ffffff/212529?text=Dr.+N" alt="Dr. Nagarathna" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
                         <span class="absolute bottom-4 right-4 bg-blue-700 w-8 h-8 rounded-full"></span>
                     </div>
                     <div class="mt-4">
                         <h3 class="text-2xl font-bold text-gray-900">Dr. John Doe</h3>
                         <p class="text-blue-700 mb-2">Professor, Law School</p>
+
                     </div>
                 </div>
                 <div class="text-center reveal" style="transition-delay: 200ms;">
                     <div class="relative inline-block">
+
                         <img src="https://placehold.co/300x300/ffffff/212529?text=XXX+YYY" alt="XXX YYY" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
                          <span class="absolute bottom-4 right-4 bg-blue-700 w-8 h-8 rounded-full"></span>
                     </div>
                     <div class="mt-4">
                         <h3 class="text-2xl font-bold text-gray-900">XXX YYY</h3>
                         <p class="text-blue-700 mb-2">Advocate, Supreme Court</p>
+
                     </div>
                 </div>
                 <div class="text-center reveal" style="transition-delay: 400ms;">
                     <div class="relative inline-block">
+
                         <img src="https://placehold.co/300x300/ffffff/212529?text=PPP+QQQ" alt="PPP QQQ" class="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover">
                          <span class="absolute bottom-4 right-4 bg-blue-700 w-8 h-8 rounded-full"></span>
                     </div>
                     <div class="mt-4">
                         <h3 class="text-2xl font-bold text-gray-900">PPP QQQ</h3>
                         <p class="text-blue-700 mb-2">CTO, XYZ Corporation</p>
+
                     </div>
                 </div>
             </div>
@@ -313,6 +325,35 @@
 
         revealElements.forEach(el => {
             observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // This is a basic toggle. For a more robust solution, you might want to manage focus, etc.
+            // For now, we'll also adjust the layout for when the menu is open.
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('absolute', 'top-16', 'left-0', 'right-0', 'bg-gray-800', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4');
+                mobileMenu.classList.remove('md:flex', 'items-center', 'space-x-8');
+            } else {
+                 mobileMenu.classList.remove('absolute', 'top-16', 'left-0', 'right-0', 'bg-gray-800', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4');
+                 mobileMenu.classList.add('md:flex', 'items-center', 'space-x-8');
+            }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // Only on mobile
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('absolute', 'top-16', 'left-0', 'right-0', 'bg-gray-800', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4');
+                    mobileMenu.classList.add('md:flex', 'items-center', 'space-x-8');
+                }
+            });
         });
     </script>
 
