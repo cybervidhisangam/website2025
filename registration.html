@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for Cyber Vidhi Sangam 2025 - The inaugural alumni meet for the NLSIU PGD in Cyber Law & Forensics. Join us on 24th October in Bangalore.">
+    <title>Registration - Cyber Vidhi Sangam 2025</title>
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --text-dark: #1a202c;
+            --text-muted: #718096;
+            --primary: #2c5282;
+            --primary-light: #3b82f6;
+            --border-color: #e2e8f0;
+            --accent: #edf2f7;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(26, 32, 44, 0.8), rgba(44, 82, 130, 0.8)), url('images/banner.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(44, 82, 130, 0.3);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .nav-bar {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background: var(--primary-light);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 4rem;
+        }
+        .timeline .timeline-item {
+            position: relative;
+        }
+        .timeline .timeline-item .card {
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            .timeline .timeline-item:nth-child(odd) .card::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent transparent transparent var(--border-color);
+            }
+            .timeline .timeline-item:nth-child(even) .card::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                transform: translateY(-50%);
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent var(--border-color) transparent transparent;
+            }
+        }
+        /* Animation for scroll reveal */
+        .js .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .js .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        .speaker-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+        .speaker-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .speaker-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            border: 4px solid var(--border-color);
+            object-fit: cover;
+        }
+        .timeline-dot {
+            background: var(--primary);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px white, 0 0 0 6px var(--border-color);
+        }
+        .payment-qr {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid var(--border-color);
+        }
+    </style>
+    <script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+    <header class="nav-bar sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
+            <a href="index.html" class="font-serif text-2xl font-bold text-gray-900"> <img src="images/cvs-2.png" alt="Cyber Vidhi Sangam" class="w-20 h-10" style="height: 100px; width: 200px;"> </a>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-700 focus:outline-none focus:text-blue-700" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden w-full md:flex md:items-center md:w-auto">
+                <div class="w-full md:flex md:items-center md:space-x-8 pt-4 md:pt-0">
+                    <a href="index.html#about" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">About</a>
+                    <a href="index.html#speakers" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">Speakers</a>
+                    <a href="index.html#schedule" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">Schedule</a>
+                    <a href="registration.html" class="btn-primary mt-4 md:mt-0 md:-my-2">Register</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="registration-hero" class="hero-bg min-h-screen flex items-center">
+        <div class="hero-content container mx-auto px-6 text-center text-white">
+            <h1 class="font-serif text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Registration</h1>
+            <h2 class="text-xl md:text-3xl text-blue-100 mb-8">Cyber Vidhi Sangam 2025</h2>
+            <p class="text-lg md:text-xl text-blue-200 mb-8">Secure your place at the inaugural NLSIU CLCF Alumni Meet</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-20">
+
+        <section id="registration-details" class="py-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title reveal">Complete Your Registration</h2>
+                <p class="section-subtitle reveal">Follow these simple steps to secure your place at Cyber Vidhi Sangam 2025</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Payment QR Code -->
+                    <div class="reveal text-center">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 mb-6">Step 1: Make Payment</h3>
+                        <p class="text-gray-700 mb-6">Scan the QR code below to complete your registration payment</p>
+                        <div class="flex justify-center">
+                            <img src="images/payment_qr.jpg" alt="Payment QR Code" class="payment-qr">
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">Scan with any UPI-enabled app</p>
+                    </div>
+
+                    <!-- Registration Form Link -->
+                    <div class="reveal text-center">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 mb-6">Step 2: Share Payment Details</h3>
+                        <p class="text-gray-700 mb-6">After making the payment, please share your details and transaction information</p>
+                        <div class="card p-8">
+                            <div class="feature-icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700 mb-6">Click the link below to access the registration form and share your payment details</p>
+                            <a href="https://docs.google.com/spreadsheets/d/1LN8IjagaVIe6RpO7cF2ZzaXfPcMxDv_snBONQpLIaXg/edit?resourcekey&gid=313043547#gid=313043547" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn-primary text-lg px-8 py-4">
+                                Share Payment Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Important Notes -->
+                <div class="mt-16 reveal">
+                    <div class="card p-8 bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 mb-4">Important Notes</h3>
+                        <div class="text-left space-y-3 text-gray-700">
+                            <p>• Please ensure you complete both steps to confirm your registration</p>
+                            <p>• Registration is confirmed only after payment verification</p>
+                            <p>• Limited seats available - register early to avoid disappointment</p>
+                            <p>• For any queries, please contact the organizing committee</p>
+                            <p>• Registration includes access to all sessions, networking, and dinner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Details Reminder -->
+                <div class="mt-16 reveal">
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 mb-8">Event Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="card p-6 text-center">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Date</h4>
+                            <p class="text-gray-700">24 October 2025</p>
+                        </div>
+                        <div class="card p-6 text-center">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Venue</h4>
+                            <p class="text-gray-700">Bangalore International Center<br><span class="text-sm text-gray-500">Bangalore, India</span></p>
+                        </div>
+                        <div class="card p-6 text-center">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Time</h4>
+                            <p class="text-gray-700">04:00 PM - 09:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-200 bg-gray-50">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <div class="mb-6">
+                <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">Cyber Vidhi Sangam 2025</h3>
+                <p class="text-gray-600">An initiative from the NLSIU PGD Cyber Law & Cyber Forensics Alumni Network</p>
+            </div>
+            <div class="border-t border-gray-200 pt-6">
+                <p class="text-gray-500">&copy; 2025 Cyber Vidhi Sangam. All Rights Reserved.</p>
+                <p class="text-sm text-gray-400 mt-2">Powered by NLSIU Alumni Network</p>          
+                <p class="text-sm text-gray-400 mt-2"><a href="docs/cvs_terms_and_conditions.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            
+            // Add mobile-specific styling when menu is open
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'border-b', 'border-gray-200', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4', 'shadow-lg');
+            } else {
+                mobileMenu.classList.remove('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'border-b', 'border-gray-200', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4', 'shadow-lg');
+            }
+        });
+
+        // Close menu when a link is clicked (mobile only)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'border-b', 'border-gray-200', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4', 'shadow-lg');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Simple scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
