@@ -174,12 +174,10 @@
             box-shadow: 0 0 0 4px white, 0 0 0 6px var(--border-color);
         }
         .payment-qr {
-            max-width: 300px;
+            max-width: 160px;
             width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border: 2px solid var(--border-color);
+            margin-bottom: 1rem;
         }
     </style>
     <script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
@@ -230,11 +228,14 @@
                     <!-- Payment QR Code -->
                     <div class="reveal text-center">
                         <h3 class="font-serif text-2xl font-bold text-gray-900 mb-6">Step 1: Make Payment</h3>
-                        <p class="text-gray-700 mb-6">Scan the QR code below to complete your registration payment</p>
-                        <div class="flex justify-center">
-                            <img src="images/payment_qr.jpg" alt="Payment QR Code" class="payment-qr">
+                        <p class="text-gray-700 mb-6">Scan the QR code below with any UPI-enabled app to complete your registration payment</p>
+                        <div class="card p-8">
+                            <div class="flex justify-center">
+                                <img src="images/qr.png" alt="Payment QR Code" class="payment-qr">
+                            </div>
+                            <p class="text-gray-700 mb-2">Registration fee: <b>Rs.3000/-</b></p>
+                            <p class="text-sm text-gray-600">UPI ID: siddhahasthaconsul@idfcbank</p>
                         </div>
-                        <p class="text-sm text-gray-600 mt-4">Scan with any UPI-enabled app</p>
                     </div>
 
                     <!-- Registration Form Link -->
