@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Event Schedule - Cyber Vidhi Sangam 2025">
+    <title>Schedule - Cyber Vidhi Sangam 2025</title>
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --text-dark: #1a202c;
+            --text-muted: #718096;
+            --primary: #2f5a75;
+            --primary-light: #446d87;
+            --border-color: #e2e8f0;
+            --accent: #edf2f7;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .nav-bar {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background: var(--primary-light);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(26, 32, 44, 0.8), rgba(47, 90, 117, 0.8)), url('images/banner.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(44, 82, 130, 0.3);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .schedule-item {
+            background: var(--bg-white);
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
+        }
+        @media (min-width: 768px) {
+            .schedule-item {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        .schedule-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+        .schedule-time {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        @media (min-width: 640px) {
+            .schedule-time {
+                font-size: 1.125rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .schedule-time {
+                font-size: 1.25rem;
+            }
+        }
+        .schedule-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+        @media (min-width: 768px) {
+            .schedule-title {
+                font-size: 1.125rem;
+            }
+        }
+        .schedule-subtitle {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            line-height: 1.4;
+        }
+        @media (min-width: 768px) {
+            .schedule-subtitle {
+                font-size: 0.95rem;
+            }
+        }
+        .highlight {
+            background: linear-gradient(135deg, #2f5a75, #446d87);
+            color: white;
+            border-left: 4px solid #1a3a4a;
+        }
+        .highlight .schedule-time {
+            color: #a8d5ff;
+        }
+        .highlight .schedule-title {
+            color: white;
+        }
+        .highlight .schedule-subtitle {
+            color: #e0f2ff;
+        }
+        /* Animation for scroll reveal */
+        .js .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .js .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+    <header class="nav-bar sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
+            <a href="index.html" class="font-serif text-2xl font-bold text-gray-900"> 
+                <img src="images/cvs-2.png" alt="Cyber Vidhi Sangam" class="w-20 h-10" style="height: 100px; width: 200px;"> 
+            </a>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-700 focus:outline-none focus:text-blue-700" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden w-full md:flex md:items-center md:w-auto">
+                <div class="w-full md:flex md:items-center md:space-x-8 pt-4 md:pt-0">
+                    <a href="index.html#about" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">The Why</a>
+                    <a href="index.html#speakers" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">The Voices</a>
+                    <a href="schedule.html" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">The Flow</a>
+                    <a href="index.html#panels" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">The Panels</a>
+                    <a href="registration.html" class="btn-primary mt-4 md:mt-0 md:-my-2">Join Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with smaller blue area -->
+    <section class="hero-bg min-h-[30vh] md:min-h-[35vh] lg:min-h-[40vh] flex items-center justify-center">
+        <div class="hero-content px-4 sm:px-6 py-12 md:py-16 text-center text-white">
+            <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 md:mb-4">Event Schedule</h1>
+            <p class="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl mx-auto px-4">A day designed for insight, dialogue, and collaboration at the intersection of law and technology</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 sm:px-6 py-12 md:py-16 lg:py-20">
+        <section id="schedule" class="max-w-4xl mx-auto">
+            <div class="text-center mb-8 md:mb-12">
+                <p class="text-xl sm:text-2xl font-serif font-bold text-gray-900 mb-2">24 October 2025</p>
+                <p class="text-sm sm:text-base text-gray-600">Bangalore International Center</p>
+            </div>
+
+            <div class="schedule-timeline">
+                
+                <!-- Registration -->
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">04:00 PM</div>
+                    <div class="schedule-title">Registration Opens</div>
+                    <div class="schedule-subtitle">Welcome & check-in begins</div>
+                </div>
+
+                <!-- High Tea & Networking -->
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">04:00 PM - 04:30 PM</div>
+                    <div class="schedule-title">High Tea & Networking</div>
+                    <div class="schedule-subtitle">Connect with fellow alumni and guests over refreshments</div>
+                </div>
+
+                <!-- Keynote -->
+                <div class="schedule-item highlight reveal">
+                    <div class="schedule-time">05:00 PM - 05:15 PM</div>
+                    <div class="schedule-title">Keynote Address</div>
+                    <div class="schedule-subtitle">
+                        <strong>Speaker:</strong> Dr. Nigam Nuggehalli<br>
+                        <span class="text-sm opacity-90">Registrar & Professor of Law, NLSIU</span><br>
+                        <em>"The Voice of Convergence: Why This Conclave, Why Now"</em>
+                    </div>
+                </div>
+
+                <!-- Panel 1 -->
+                <div class="schedule-item highlight reveal">
+                    <div class="schedule-time">05:20 PM - 06:05 PM</div>
+                    <div class="schedule-title">Panel Discussion</div>
+                    <div class="schedule-subtitle">
+                        <strong>Privacy as Leverage:</strong> Building Trust, Loyalty, and Market Edge<br><br>
+                        <strong>Moderator:</strong> Prof. Sidharth Chauhan, Assistant Professor of Law, NLSIU<br>
+                        <strong>Panelists:</strong><br>
+                        • Sachin Dhawan, Deputy Director, The Dialogue<br>
+                        • Shloka Narayanan, Of counsel, Poovayya & Co.<br>
+                        • Sandeep Kumar Akkimolla, Director – Global CISO & DPO, ANSR
+                    </div>
+                </div>
+
+                <!-- Announcements -->
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">06:05 PM - 06:35 PM</div>
+                    <div class="schedule-title">Announcements</div>
+                    <div class="schedule-subtitle">Updates and special recognitions</div>
+                </div>
+
+                <!-- Tea Break -->
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">06:40 PM - 07:00 PM</div>
+                    <div class="schedule-title">Tea Break & Networking</div>
+                    <div class="schedule-subtitle">Informal discussions and refreshments</div>
+                </div>
+
+                <!-- Fireside Chat -->
+                <div class="schedule-item highlight reveal">
+                    <div class="schedule-time">07:00 PM - 07:45 PM</div>
+                    <div class="schedule-title">Fireside Chat</div>
+                    <div class="schedule-subtitle">
+                        <strong>AI vs AI:</strong> The Future Between Cyber Defenders & Cyber Criminals<br><br>
+                        <strong>Chair:</strong> Dr. A. Nagarathna, Associate Professor of Law, NLSIU<br>
+                        <strong>Panelists:</strong><br>
+                        • Anuj Bhansali, VP – Trust & Safety, PhonePe<br>
+                        • Rahul Sasi, Co-Founder & CEO, CloudSEK<br>
+                        • Dr. Fakkeerappa Kaginelli, IPS, DIG Law & Order
+                    </div>
+                </div>
+
+                <!-- Vote of Thanks -->
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">08:00 PM - 08:15 PM</div>
+                    <div class="schedule-title">Vote of Thanks</div>
+                    <div class="schedule-subtitle">Closing remarks and gratitude</div>
+                </div>
+
+                <!-- Networking -->
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">08:15 PM - 08:30 PM</div>
+                    <div class="schedule-title">Evening Conversations</div>
+                    <div class="schedule-subtitle">Continue the dialogue</div>
+                </div>
+
+                <!-- Dinner -->
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">08:30 PM onwards</div>
+                    <div class="schedule-title">Dinner</div>
+                    <div class="schedule-subtitle">Networking over dinner in an informal setting</div>
+                </div>
+
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-12 md:mt-16 text-center reveal">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200 rounded-xl md:rounded-2xl p-6 md:p-8">
+                    <h3 class="font-serif text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Ready to Join?</h3>
+                    <p class="text-sm md:text-base text-gray-700 mb-4 md:mb-6">Secure your place for this landmark event</p>
+                    <a href="registration.html" class="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4">Register Now</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-gray-50">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <div class="mb-6">
+                <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">Cyber Vidhi Sangam 2025</h3>
+                <p class="text-gray-600">An initiative from the NLSIU PGD Cyber Law & Cyber Forensics Alumni Network</p>
+            </div>
+            <div class="mt-8">
+                <h3 class="text-base font-semibold text-gray-900">Follow Cyber Vidhi Sangam</h3>
+                <div class="mt-4 flex items-center gap-4 justify-center">
+                    <a href="https://cybervidhisangam.org/" class="text-gray-600 hover:text-blue-700 underline" target="_blank" rel="noopener">Website</a>
+                    <a href="https://www.linkedin.com/groups/15181013/" class="text-gray-600 hover:text-blue-700 underline" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.facebook.com/share/g/17DuBU7hHg/" class="text-gray-600 hover:text-blue-700 underline" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.instagram.com/p/DPEeP2bjXRJ/" class="text-gray-600 hover:text-blue-700 underline" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-6 mt-6">
+                <p class="text-gray-500">&copy; 2025 Cyber Vidhi Sangam. All Rights Reserved.</p>
+                <p class="text-sm text-gray-400 mt-2">Powered by NLSIU Alumni Network</p>          
+                <p class="text-sm text-gray-400 mt-2"><a href="docs/cvs_terms_and_conditions.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            
+            // Add mobile-specific styling when menu is open
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'border-b', 'border-gray-200', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4', 'shadow-lg');
+            } else {
+                mobileMenu.classList.remove('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'border-b', 'border-gray-200', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4', 'shadow-lg');
+            }
+        });
+
+        // Close menu when a link is clicked (mobile only)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'border-b', 'border-gray-200', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4', 'shadow-lg');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Simple scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
+
