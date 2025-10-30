@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Organizers — Cyber Vidhi Sangam 2025" />
+  <title>Organizers • Cyber Vidhi Sangam 2025</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg-light:#f7fafc; --bg-white:#fff; --text-dark:#1a202c; --text-muted:#718096; --primary:#2f5a75; --border:#e2e8f0; }
+    body { font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:var(--bg-light); color:var(--text-dark); }
+    .font-serif { font-family:'Playfair Display', serif; }
+    .nav-bar { background:var(--bg-white); border-bottom:1px solid var(--border); box-shadow:0 1px 3px rgba(0,0,0,.06) }
+    .card { background:var(--bg-white); border:1px solid var(--border); border-radius:12px; transition:transform .15s ease, box-shadow .15s ease; }
+    .card:hover { transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.08); }
+    .organizer-image { width:120px; height:120px; border-radius:9999px; object-fit:cover; border:4px solid var(--border); margin:0 auto 12px; }
+    .btn-primary { display:inline-block; background:var(--primary); color:#fff; padding:.6rem 1rem; border-radius:.5rem; }
+    .btn-primary:hover { filter:brightness(1.05); }
+    .social-links { display:flex; gap:12px; justify-content:center; margin-top:12px; }
+    .social-link { color:var(--text-muted); transition:color .15s ease; }
+    .social-link:hover { color:var(--primary); }
+  </style>
+  <script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="nav-bar sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
+      <a href="index.html" class="font-serif text-2xl font-bold text-gray-900">
+        <img src="images/cvs-2.png" alt="Cyber Vidhi Sangam" style="height:80px;width:160px" />
+      </a>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden w-full md:flex md:items-center md:w-auto">
+        <div class="w-full md:flex md:items-center md:space-x-8 pt-4 md:pt-0">
+          <a href="index.html#about" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">The Why</a>
+          <a href="index.html#speakers" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">The Voices</a>
+          <a href="index.html#schedule" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">The Flow</a>
+          <a href="organizers.html" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">Organizers</a>
+          <a href="index.html#panels" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">The Panels</a>
+          <a href="schedule.html" class="btn-primary mt-4 md:mt-0 md:-my-2">Schedule</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="min-h-[40vh] flex items-center justify-center text-center bg-white border-b border-[var(--border)]">
+    <div class="px-6 py-16">
+      <h1 class="font-serif text-5xl md:text-6xl font-extrabold mb-4">Organizers</h1>
+      <p class="text-lg text-[var(--text-muted)] max-w-2xl mx-auto">The dedicated team behind Cyber Vidhi Sangam 2025.</p>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <main class="container mx-auto px-6 py-20">
+    <div id="grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 bg-gray-50">
+    <div class="container mx-auto px-6 py-12 text-center">
+      <div class="mt-2 flex items-center gap-4 justify-center">
+        <a href="https://cybervidhisangam.org/" class="text-gray-600 hover:text-blue-700 underline" target="_blank" rel="noopener">Website</a>
+        <a href="https://www.linkedin.com/groups/15181013/" class="text-gray-600 hover:text-blue-700 underline" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/share/g/17DuBU7hHg/" class="text-gray-600 hover:text-blue-700 underline" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/cybervidhisangam/" class="text-gray-600 hover:text-blue-700 underline" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <p class="text-gray-500 mt-6">© 2025 Cyber Vidhi Sangam</p>
+    </div>
+  </footer>
+
+  <script>
+  // ---- data ----
+  const DATA = [
+    { 
+      name: "Bobinson K B",
+      title: "CTO, Freedom Ledger, Inc (Peerplays)",
+      img: "images/placeholder.png",
+      linkedin: "https://www.linkedin.com/in/bobinson/",
+      twitter: "https://x.com/bobinson",
+      website: "https://freebird.in"
+    },
+    {
+      name: "Sandeep Kalu",
+      title: "",
+      img: "images/organizers/sandeep_kalu.jpg",
+      linkedin: "https://www.linkedin.com/in/sandeep-kalu-31642136/"
+    },
+    {
+      name: "Vasantha Krishnamurthy",
+      title: "Strategy & Growth Leader",
+      img: "images/organizers/vasantha.jpg",
+      linkedin: "https://www.linkedin.com/in/kvasantha/"
+    },
+    {
+      name: "Anand Kumar Jha",
+      title: "Vice President- Lead systems Architect at Wells Fargo",
+      img: "images/placeholder.png",
+      linkedin: "https://www.linkedin.com/in/anandkumarjhaiam/"
+    },
+    {
+      name: "Radhika Khurana",
+      title: "Chief People Officer, Impact Analytics",
+      img: "images/placeholder.png",
+      linkedin: "https://www.linkedin.com/in/radhikakhurana/"
+    }
+  ];
+
+  const grid = document.getElementById('grid');
+
+  function cardHTML(x){
+    let socialLinksHTML = '<div class="social-links">';
+    
+    if (x.linkedin) {
+      socialLinksHTML += `
+        <a href="${x.linkedin}" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+      `;
+    }
+    
+    if (x.twitter) {
+      socialLinksHTML += `
+        <a href="${x.twitter}" target="_blank" rel="noopener" class="social-link" title="Twitter/X">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      `;
+    }
+    
+    if (x.website) {
+      socialLinksHTML += `
+        <a href="${x.website}" target="_blank" rel="noopener" class="social-link" title="Website">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </a>
+      `;
+    }
+    
+    socialLinksHTML += '</div>';
+    
+    return `
+      <article class="card p-6 text-center">
+        <img src="${x.img}" alt="${x.name}" class="organizer-image" onerror="this.onerror=null;this.src='images/placeholder.png'"/>
+        <h3 class="text-lg font-semibold text-gray-900">${x.name}</h3>
+        ${x.title ? `<p class="text-sm text-gray-600 mt-1">${x.title}</p>` : ''}
+        ${socialLinksHTML}
+      </article>
+    `;
+  }
+
+  function render(){
+    grid.innerHTML = DATA
+      .map(cardHTML)
+      .join('');
+  }
+
+  render();
+
+  // mobile menu
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuButton?.addEventListener('click', () => {
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isExpanded));
+    mobileMenu.classList.toggle('hidden');
+    if (!mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('absolute','top-16','left-0','right-0','bg-white','border-b','border-gray-200','p-5','flex','flex-col','items-center','space-y-4','shadow-lg');
+    } else {
+      mobileMenu.classList.remove('absolute','top-16','left-0','right-0','bg-white','border-b','border-gray-200','p-5','flex','flex-col','items-center','space-y-4','shadow-lg');
+    }
+  });
+  </script>
+</body>
+</html>
+
