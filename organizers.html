@@ -159,9 +159,16 @@
     
     socialLinksHTML += '</div>';
     
+    // Generate WebP path for optimized loading
+    const imgBase = x.img.replace(/\.(jpg|jpeg|JPG|JPEG|png)$/i, '');
+    const webpImg = imgBase + '.webp';
+    
     return `
       <article class="card p-6 text-center">
-        <img src="${x.img}" alt="${x.name}" class="organizer-image" onerror="this.onerror=null;this.src='images/placeholder.png'"/>
+        <picture>
+          <source srcset="${webpImg}" type="image/webp">
+          <img src="${x.img}" alt="${x.name}" class="organizer-image" onerror="this.onerror=null;this.src='images/placeholder.png'"/>
+        </picture>
         <h3 class="text-lg font-semibold text-gray-900">${x.name}</h3>
         ${x.title ? `<p class="text-sm text-gray-600 mt-1">${x.title}</p>` : ''}
         ${socialLinksHTML}
